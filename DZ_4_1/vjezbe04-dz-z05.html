@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Peti zadatak</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 
+	var osoba1 = {
+    firstname: "Marko",
+    lastname: "Maric",
+    age: 40,
+    eyeColor: "crna",
+    vrati: function(){
+        return "Prva osoba:<br>Ime: " + this.firstname + "<br>Prezime: " + this.lastname + "<br>Godine: " + this.age + "<br>Boja očiju: " + this.eyeColor + "<br>";
+		}
+	}
+
+	var osoba2 = {
+    firstname: "Ante",
+    lastname: "Perić",
+    age: 25,
+    eyeColor: "smeđa",
+    vrati: function(){
+        return "Druga osoba:<br>Ime: " + this.firstname + "<br>Prezime: " + this.lastname + "<br>Godine: " + this.age + "<br>Boja očiju: " + this.eyeColor + "<br>";
+		}
+	}
+
+	var osoba3 = {
+    firstname: "Ivan",
+    lastname: "Ivić",
+    age: 34,
+    eyeColor: "plava",
+    vrati: function(){
+        return "Treća osoba:<br>Ime: " + this.firstname + "<br>Prezime: " + this.lastname + "<br>Godine: " + this.age + "<br>Boja očiju: " + this.eyeColor + "<br>";
+		}
+	}
+
+	var osobe = [osoba1, osoba2, osoba3];
+	var i;
+	
+	for (i = 0; i < osobe.length; i++){
+    document.write(osobe[i].vrati() + "<br>");
+	}
+
+ </script>
+</body>
+</html>

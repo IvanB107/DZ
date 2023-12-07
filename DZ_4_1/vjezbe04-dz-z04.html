@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Četvrti zadatak</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 
+	polje = new Array(1,2,3,4,7,8,5,6,9, 55, 12, 4,85);
+	document.write("Dužina polja: " + polje.length + "<br>");
+ 
+	var Najvecepolje = polje.sort((a, b) => b - a);
+	document.write("Sortirano od najvećeg prema najmanjem: " + Najvecepolje + "<br>");
+
+	var Najmanjepolje = polje.sort((a, b) => a - b);
+	document.write("Sortirano od najmanjeg prema najvećem: " + Najmanjepolje + "<br>");
+
+	Najmanjepolje.pop();
+	document.write("Uklonjen zadnji član: " + Najmanjepolje + "<br>");
+
+	Najmanjepolje.push(19, 22);
+	document.write("Dodana dva člana: " + Najmanjepolje + "<br>");
+
+	var polje2 = ["Banana", "Orange", "Apple", "Mango"];
+	var polje_final = polje.concat(polje2);
+	document.write("Spojena polja: " + polje_final);
+
+ </script>
+</body>
+</html>

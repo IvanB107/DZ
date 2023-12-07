@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Treći zadatak</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 
+ var i;
+ var j;
+ var prost;
+ 
+ for (i = 1; i <= 1000; i++) 
+ {
+		prost = 1;
+		for(j = 2; j < i; j++)
+		{
+			if(i % j == 0)
+			{
+				prost = 0;
+			}
+		}
+		if(prost == 1)
+		{
+			console.log(i);
+			document.write(i + "<br>");
+		}
+}
+ 
+ </script>
+</body>
+</html>

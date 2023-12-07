@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Deveti zadatak</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 
+	function savrsen(broj){
+	var pom = 0;
+	var i;
+	
+	for(i = 1; i <= broj / 2; i++){
+	if(broj % i === 0)
+		{
+			pom += i;
+        }
+	}
+	if(pom === broj && pom != 0)
+	console.log("Savršen broj");
+	else
+	console.log("Nije savršen");
+	}
+	savrsen(28);
+	
+ </script>
+</body>
+</html>
