@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Četvrti zadatak</title>
+</head>
+<body>
+
+	<form>
+		<label>Unesite ocjenu (od 1-5):</label>
+		<input type="text" id="tekst" name="tekst"/>
+		<button type="button" onclick="ispisi()">Prikaži ocjenu</button>
+	</form>
+	<p id="ispis_ocjene"></p>
+  
+  <script type="text/javascript">
+
+	function ispisi(){
+
+		var unos = document.getElementById("tekst");
+		var unesen = unos.value;
+		var broj = parseInt(unesen);
+		var ispis = document.getElementById("ispis_ocjene");
+
+		if(broj >= 1 && broj <= 5){
+			var ocjena;
+			switch(broj){
+			case 1:
+				ocjena = "Nedovoljan";
+				break;
+			case 2:
+				ocjena = "Dovoljan";
+				break;
+			case 3:
+				ocjena = "Dobar";
+				break;
+			case 4:
+				ocjena = "Vrlo dobar";
+				break;
+			case 5:
+				ocjena = "Odličan";
+				break;
+			}
+			ispis.innerHTML = "Ocjena: " + ocjena;
+		} 
+		else{
+			ispis.innerHTML = "Unesite ocjenu između 1 i 5!";
+			}
+		}
+
+  </script>
+</body>
+</html>

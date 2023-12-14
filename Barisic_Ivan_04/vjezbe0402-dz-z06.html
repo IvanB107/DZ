@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Šesti zadatak</title>
+</head>
+<body>
+
+	<form>
+		<labeL>X =</label>
+		<input type="text" id="broj1" name="broj1"/><br>
+		<label>Y =</label>
+		<input type="text" id="broj2" name="broj2"/><br>
+		<button type="button" onclick="zbroji()">Zbroji</button><br>
+		<label>REZULTAT =</label>
+		<input type="text" id="rezultat" name="rezultat"/>
+	</form>
+	
+  <script type="text/javascript">
+
+	function zbroji(){
+
+		var prvi_unos = document.getElementById("broj1");
+		var drugi_unos = document.getElementById("broj2");
+		var rez = document.getElementById("rezultat");
+
+		var broj1 = parseFloat(prvi_unos.value);
+		var broj2 = parseFloat(drugi_unos.value);
+
+		if(!isNaN(broj1) && !isNaN(broj2)){
+        var zbroj = broj1 + broj2;
+        rez.value = zbroj;
+		return rez.value;
+		} 
+		else{
+			alert("Unesite ispravne brojeve.");
+			}
+		}
+
+  </script>
+</body>
+</html>

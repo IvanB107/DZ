@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Osmi zadatak</title>
+</head>
+<body>
+
+	<input type="text" id="operand1"/>
+	<label>operand1</label><br><br>
+
+	<input type="text" id="operand2"/>
+	<label>operand2</label><br><br>
+
+	<button onclick="izracunaj('zbrajanje')">+</button>
+	<button onclick="izracunaj('oduzimanje')">-</button>
+	<button onclick="izracunaj('mnozenje')">*</button>
+	<button onclick="izracunaj('dijeljenje')">/</button><br><br>
+
+	<button onclick="izracunaj('sinus')">sin</button>
+	<button onclick="izracunaj('kosinus')">cos</button>
+	<button onclick="izracunaj('tanges')">tan</button><br><br>
+
+	<button onclick="izracunaj('logaritam')">ln</button>
+	<button onclick="izracunaj('logaritam10')">log</button><br><br>
+
+	<button onclick="izracunaj('kvadriranje')">^2</button>
+	<button onclick="izracunaj('kubiranje')">^3</button>
+	<button onclick="izracunaj('potencija')">^n</button>
+	<input type="text" id="eksponent" />
+
+  <script type="text/javascript">
+
+	function izracunaj(operacija) {
+		var operand1 = parseFloat(document.getElementById("operand1").value);
+		var operand2 = parseFloat(document.getElementById("operand2").value);
+		var rezultat;
+
+		switch (operacija) {
+        case 'zbrajanje':
+			rezultat = operand1 + operand2;
+			break;
+        case 'oduzimanje':
+			rezultat = operand1 - operand2;
+			break;
+        case 'mnozenje':
+			rezultat = operand1 * operand2;
+			break;
+        case 'dijeljenje':
+			rezultat = operand1 / operand2;
+			break;
+        case 'sinus':
+			rezultat = Math.sin(operand1);
+			break;
+        case 'kosinus':
+			rezultat = Math.cos(operand1);
+			break;
+        case 'tanges':
+			rezultat = Math.tan(operand1);
+			break;
+        case 'logaritam':
+			rezultat = Math.log(operand1);
+			break;
+        case 'logaritam10':
+			rezultat = Math.log10(operand1);
+			break;
+        case 'kvadriranje':
+			rezultat = Math.pow(operand1, 2);
+			break;
+        case 'kubiranje':
+			rezultat = Math.pow(operand1, 3);
+			break;
+        case 'potencija':
+			var eksponent = parseFloat(document.getElementById("eksponent").value);
+			rezultat = Math.pow(operand1, eksponent);
+			break;
+			return;
+      }
+      alert("Rezultat: " + rezultat);
+    }
+
+  </script>
+</body>
+</html>

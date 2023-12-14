@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Drugi zadatak</title>
+</head>
+<body>
+	<button onclick="pozadina()">Promijeni pozadinu</button>
+	<p id="trenutna">Trenutna boja: #000000</p>
+	
+  <script type="text/javascript">
+
+	function generirajSlucajnuBoju(){
+
+		var random = Math.floor(Math.random() * 16777216);
+		var boja = "#" + random.toString(16).padStart(6, "0");
+
+		return boja;
+        }
+
+    function pozadina(){
+
+		var tijelo = document.body;
+		var nova_boja = generirajSlucajnuBoju();
+
+		tijelo.style.backgroundColor = nova_boja;
+		document.getElementById("trenutna").innerHTML = "Trenutna boja: " + nova_boja;
+		}
+  </script>
+</body>
+</html>

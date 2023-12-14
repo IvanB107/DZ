@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Deveti zadatak</title>
+</head>
+<body>
+
+	<img id="prekidac" src="off.png" onclick="promijeni()">
+	<img id="zarulja" src="zarulja_off.png">
+
+  <script type="text/javascript">
+
+	var stanje = "OFF"; // Početno stanje prekidača
+
+    function promijeni(){
+    var zar = document.getElementById("zarulja");
+	var prek = document.getElementById("prekidac");
+
+		if(stanje == "OFF"){
+			stanje = "ON";
+			zar.src = "zarulja_on.png";
+			prek.src = "on.png";
+		}
+		else{
+			stanje = "OFF";
+			zar.src = "zarulja_off.png";
+			prek.src = "off.png";
+			}
+		}
+
+  </script>
+</body>
+</html>

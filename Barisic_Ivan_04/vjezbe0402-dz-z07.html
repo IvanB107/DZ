@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sedmi zadatak</title>
+</head>
+<body>
+
+	<form>
+		<label>Unesite dan (01-31):</label>
+		<input type="text" id="dan" name="dan" pattern="[0-9]{2}"/><br><br>
+
+		<label>Unesite mjesec (01-12):</label>
+		<input type="text" id="mjesec" name="mjesec" pattern="[0-9]{2}"/><br><br>
+
+		<label>Unesite godinu (npr. 1970):</label>
+		<input type="text" id="godina" name="godina" pattern="[0-9]{4}"/><br><br>
+
+		<button type="button" onclick="izracunajGodine()">Izračunaj</button>
+  </form>
+	
+  <script type="text/javascript">
+
+	function izracunajGodine(){
+		var dan_unos = document.getElementById("dan");
+		var mjesec_unos = document.getElementById("mjesec");
+		var godina_unos = document.getElementById("godina");
+
+		if (dan_unos.value == "" || mjesec_unos.value == "" || godina_unos.value == ""){
+			alert("Unesite sve podatke!");
+			return;
+		}
+		var dan = parseInt(dan_unos.value);
+		var mjesec = parseInt(mjesec_unos.value);
+		var godina = parseInt(godina_unos.value);
+
+		if (isNaN(dan) || isNaN(mjesec) || isNaN(godina)){
+			alert("Unesite ispravne podatke.");
+			return;
+		}
+		if (dan < 1 || dan > 31 || mjesec < 1 || mjesec > 12){
+			alert("Unesite ispravne podatke za dan i mjesec!");
+			return;
+		}
+		var danas = new Date();
+		var datum = new Date(godina, mjesec - 1, dan);
+		var razlika = Math.floor((danas - datum) / (365.25 * 24 * 60 * 60 * 1000));
+
+		alert("Imate " + razlika + " godina.");
+		}
+	
+  </script>
+</body>
+</html>

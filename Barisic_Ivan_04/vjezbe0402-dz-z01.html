@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prvi zadatak</title>
+</head>
+<body>
+  <script type="text/javascript">
+
+	function rezultat(){
+
+		var i;
+		var unos = prompt("Unesite brojeve odvojene zarezom:");
+		var niz = unos.split(",");
+
+		var aritmeticka_sredina = 0;
+		var geometrijska_sredina = 1;
+
+		for(i = 0; i < niz.length; i++){
+			aritmeticka_sredina += parseInt(niz[i]);
+			}
+			aritmeticka_sredina /= niz.length;
+
+		for(i = 0; i < niz.length; i++){
+        geometrijska_sredina *= parseInt(niz[i]);
+			}
+		geometrijska_sredina = Math.pow(geometrijska_sredina, 1 / niz.length);
+
+		document.write("Aritmetička sredina: " + aritmeticka_sredina.toFixed(2) + "<br>");
+		document.write("Geometrijska sredina: " + geometrijska_sredina.toFixed(2));
+    }
+    rezultat();
+
+  </script>
+</body>
+</html>

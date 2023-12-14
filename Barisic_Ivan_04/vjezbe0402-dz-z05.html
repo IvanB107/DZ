@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Peti zadatak</title>
+</head>
+<body>
+
+	<form>
+		<label>Unesite registarsku oznaku BIH vozila:</label>
+		<input type="text" id="oznaka" name="oznaka"/>
+		<button type="button" onclick="provjeri()">Validacija</button>
+	</form>
+  
+  <script type="text/javascript">
+
+	function provjeri(){
+
+		var unos = document.getElementById("oznaka");
+		var unesen = unos.value;
+		var provjera = /^[A-Z]{1}\d{2}-[A-Z]-\d{3}$/;
+
+		if(provjera.test(unesen)){
+			alert("Ispravna registarska oznaka!");
+			return true;
+		}
+		else{
+			alert("Neispravna registarska oznaka! Format treba biti X00–X–000.");
+			return false;
+			}
+		}
+
+  </script>
+</body>
+</html>
